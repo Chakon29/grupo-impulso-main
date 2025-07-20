@@ -15,6 +15,7 @@ export default withAuth(
         }
 
         // Protect admin routes
+        
         if (req.nextUrl.pathname.startsWith("/admin")) {
           return token?.role === "admin"
         }
